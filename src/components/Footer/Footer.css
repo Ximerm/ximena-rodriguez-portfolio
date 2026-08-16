@@ -1,0 +1,126 @@
+.footer {
+  position: relative;
+  min-height: 300px;
+  overflow: hidden;
+  background-color: var(--color-background);
+}
+
+/* =========================
+   CONTENIDO
+   ========================= */
+
+.footer__content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 80px;
+}
+
+/* =========================
+   REDES Y CONTACTO
+   ========================= */
+
+.footer__social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.footer__social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  transition: transform var(--transition-fast);
+}
+
+.footer__social-link:hover {
+  transform: translateY(-2px);
+}
+
+.footer__social-icon {
+  display: block;
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+
+/* =========================
+   COPYRIGHT
+   ========================= */
+
+.footer__copyright {
+  margin: 16px 0 0;
+  color: var(--color-text-secondary);
+  font-family: var(--font-ui);
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 1.4;
+  text-align: center;
+}
+
+/* =========================
+   VECTOR DECORATIVO
+   ========================= */
+
+.footer__vector {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  pointer-events: none;
+}
+
+/* =========================
+   TABLET
+   ========================= */
+
+@media screen and (max-width: 1024px) {
+  .footer {
+    min-height: 260px;
+  }
+
+  .footer__content {
+    padding-top: 70px;
+  }
+}
+
+/* =========================
+   MÓVIL
+   ========================= */
+
+@media screen and (max-width: 767px) {
+  .footer {
+    min-height: 220px;
+  }
+
+  .footer__content {
+    padding-top: 60px;
+  }
+
+  .footer__social {
+    gap: 16px;
+  }
+
+  .footer__social-link {
+    width: 22px;
+    height: 22px;
+  }
+
+  .footer__social-icon {
+    width: 18px;
+    height: 18px;
+  }
+
+  .footer__copyright {
+    margin-top: 12px;
+    font-size: 10px;
+  }
+}
