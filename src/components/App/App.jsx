@@ -1,7 +1,8 @@
+import "./App.css";
+
 import Header from "../Header/Header";
 import Hero from "../Hero/Hero";
-
-import "./App.css";
+import FeaturedProjects from "../FeaturedProjects/FeaturedProjects";
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
 
       <main>
         <Hero />
+        <FeaturedProjects />
       </main>
     </div>
   );

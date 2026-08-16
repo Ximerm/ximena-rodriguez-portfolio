@@ -105,17 +105,25 @@
   min-height: 600px;
 
   /*
-   * La imagen se extiende fuera del container
-   * hasta alcanzar el borde derecho de la pantalla.
+   * El visual se extiende más allá del container
+   * para ocupar todo el espacio disponible hasta
+   * el borde derecho de la pantalla.
    */
   width: calc(100% + ((100vw - var(--content-max-width)) / 2));
   margin-right: calc((100vw - var(--content-max-width)) / -2);
+
+  /*
+   * Desplazamos ligeramente la ilustración hacia
+   * la derecha para que la mancha naranja llegue
+   * hasta el borde del viewport.
+   */
+  transform: translateX(70px);
 }
 
 .hero__image {
   display: block;
-  width: 100%;
-  max-width: 700px;
+  width: 800px;
+  max-width: none;
   height: auto;
   object-fit: contain;
 }
@@ -158,10 +166,12 @@
     width: 100%;
     margin-right: 0;
     min-height: 520px;
+    transform: none;
   }
 
   .hero__image {
-    max-width: 520px;
+    width: 520px;
+    max-width: 100%;
   }
 
   .hero__button {
@@ -206,8 +216,8 @@
     line-height: 1.5;
 
     /*
-     * En pantallas pequeñas el texto justificado
-     * puede generar espacios demasiado grandes.
+     * En móvil evitamos la justificación para
+     * impedir espacios excesivos entre palabras.
      */
     text-align: left;
   }
@@ -225,13 +235,15 @@
 
   /*
    * En móvil la ilustración vuelve a su posición
-   * normal para evitar superposición con el Header.
+   * normal para evitar que se superponga con el Header
+   * y el contenido.
    */
   .hero__visual {
     width: 100%;
     min-height: auto;
     margin-right: 0;
     padding: 0 0 30px;
+    transform: none;
   }
 
   .hero__image {
