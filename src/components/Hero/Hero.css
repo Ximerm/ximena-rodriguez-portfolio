@@ -4,32 +4,39 @@
   min-height: 600px;
 }
 
-/* =========================
-   ESTRUCTURA PRINCIPAL
-   ========================= */
+/* =========================================================
+   ESTRUCTURA
+   ========================================================= */
 
 .hero__container {
   position: relative;
   display: grid;
-  grid-template-columns: 5fr 7fr;
+  grid-template-columns: 6fr 6fr;
   min-height: 600px;
 }
 
+/* =========================================================
+   CONTENIDO
+   ========================================================= */
+
 .hero__content {
   position: relative;
-  z-index: 2;
+  z-index: 3;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
+
   padding: 120px 0 60px;
 }
 
-/* =========================
+/* =========================================================
    TIPOGRAFÍA
-   ========================= */
+   ========================================================= */
 
 .hero__eyebrow {
   margin-bottom: 20px;
+
   color: var(--color-orange);
   font-family: var(--font-body);
   font-size: 18px;
@@ -39,28 +46,35 @@
 
 .hero__title {
   max-width: 620px;
+
   margin: 0 0 24px;
-  font-size: clamp(48px, 5vw, 64px);
+
+  font-size: clamp(40px, 5vw, 56px);
   line-height: 1.2;
 }
 
 .hero__description {
   max-width: 540px;
+
+  margin: 0;
+
   color: var(--color-text-secondary);
   font-family: var(--font-ui);
-  font-size: 22px;
+  font-size: 20px;
   font-weight: 400;
   line-height: 1.5;
+
   text-align: justify;
 }
 
-/* =========================
+/* =========================================================
    BOTONES
-   ========================= */
+   ========================================================= */
 
 .hero__actions {
   display: flex;
   align-items: center;
+
   gap: 12px;
   margin-top: 28px;
 }
@@ -69,17 +83,23 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
+
   min-height: 38px;
   padding: 7px 16px;
+
   border: 1.5px solid var(--color-dark);
-  border-radius: 5px;
+  border-radius: 100px;
+
   background-color: transparent;
   color: var(--color-dark);
+
   font-family: var(--font-ui);
   font-size: 16px;
   font-weight: 500;
   line-height: 1;
+
   text-decoration: none;
+
   transition:
     background-color var(--transition-fast),
     border-color var(--transition-fast),
@@ -92,53 +112,121 @@
   color: var(--color-dark);
 }
 
-/* =========================
-   ILUSTRACIÓN
-   ========================= */
+/* =========================================================
+   VISUAL
+   ========================================================= */
 
 .hero__visual {
   position: relative;
-  z-index: 1;
+  z-index: 2;
+
   display: flex;
   align-items: flex-start;
   justify-content: flex-end;
+
   min-height: 600px;
 
   /*
-   * El visual se extiende más allá del container
-   * para ocupar todo el espacio disponible hasta
-   * el borde derecho de la pantalla.
+   * Mantiene la composición extendida hasta
+   * el borde derecho del viewport.
    */
   width: calc(100% + ((100vw - var(--content-max-width)) / 2));
+
   margin-right: calc((100vw - var(--content-max-width)) / -2);
 
   /*
-   * Desplazamos ligeramente la ilustración hacia
-   * la derecha para que la mancha naranja llegue
-   * hasta el borde del viewport.
+   * Esta posición ya estaba funcionando bien
+   * con tus nuevas imágenes.
    */
-  transform: translateX(70px);
+  transform: translateX(120px);
+
+  /*
+   * La imagen comienza prácticamente desde
+   * la altura del Header.
+   */
+  margin-top: -5px;
+
+  /*
+   * Las imágenes no necesitan recibir eventos
+   * porque la interacción está en todo el Hero.
+   */
+  pointer-events: none;
 }
+
+/* =========================================================
+   IMÁGENES
+   ========================================================= */
 
 .hero__image {
+  position: absolute;
+
+  top: 0;
+  right: 0;
+
   display: block;
-  width: 800px;
+
+  width: 750px;
   max-width: none;
+
   height: auto;
+
   object-fit: contain;
+
+  /*
+   * Crossfade entre plano y código.
+   */
+  opacity: 0;
+
+  transition: opacity 0.8s ease-in-out;
 }
 
-/* =========================
+/* =========================================================
+   PLANO
+   ========================================================= */
+
+.hero__image--plan {
+  z-index: 2;
+  opacity: 1;
+}
+
+/* =========================================================
+   CÓDIGO
+   ========================================================= */
+
+.hero__image--code {
+  z-index: 1;
+  opacity: 0;
+}
+
+/*
+ * React añade estas clases dependiendo
+ * del estado showCode.
+ */
+
+.hero__image--plan.hero__image--hidden {
+  opacity: 0;
+}
+
+.hero__image--code.hero__image--visible {
+  opacity: 1;
+}
+
+/* =========================================================
    TABLET
-   ========================= */
+   ========================================================= */
 
 @media screen and (max-width: 1024px) {
   :root {
     --page-padding: 40px;
   }
 
+  .hero {
+    min-height: 560px;
+  }
+
   .hero__container {
     grid-template-columns: 1fr 1fr;
+    min-height: 560px;
   }
 
   .hero__content {
@@ -158,20 +246,20 @@
     font-size: 19px;
   }
 
-  /*
-   * En tablet la imagen vuelve a estar contenida
-   * dentro del ancho disponible.
-   */
   .hero__visual {
     width: 100%;
-    margin-right: 0;
+
     min-height: 520px;
+
+    margin-right: 0;
+    margin-top: -40px;
+
     transform: none;
   }
 
   .hero__image {
-    width: 520px;
-    max-width: 100%;
+    width: 700px;
+    max-width: none;
   }
 
   .hero__button {
@@ -179,9 +267,9 @@
   }
 }
 
-/* =========================
+/* =========================================================
    MÓVIL
-   ========================= */
+   ========================================================= */
 
 @media screen and (max-width: 767px) {
   .hero {
@@ -191,6 +279,7 @@
   .hero__container {
     display: flex;
     flex-direction: column;
+
     min-height: auto;
   }
 
@@ -205,20 +294,19 @@
 
   .hero__title {
     max-width: 100%;
+
     margin-bottom: 20px;
+
     font-size: 38px;
     line-height: 1.2;
   }
 
   .hero__description {
     max-width: 100%;
+
     font-size: 16px;
     line-height: 1.5;
 
-    /*
-     * En móvil evitamos la justificación para
-     * impedir espacios excesivos entre palabras.
-     */
     text-align: left;
   }
 
@@ -229,25 +317,46 @@
 
   .hero__button {
     min-height: 36px;
+
     padding: 7px 14px;
+
     font-size: 14px;
   }
 
-  /*
-   * En móvil la ilustración vuelve a su posición
-   * normal para evitar que se superponga con el Header
-   * y el contenido.
-   */
   .hero__visual {
     width: 100%;
+
     min-height: auto;
+
     margin-right: 0;
+    margin-top: 0;
+
     padding: 0 0 30px;
+
     transform: none;
   }
 
   .hero__image {
+    position: relative;
+
     width: 100%;
-    max-width: 420px;
+    max-width: 520px;
+
+    margin: 0 auto;
+  }
+
+  /*
+   * En móvil dejamos que la animación automática
+   * siga funcionando.
+   */
+}
+
+/* =========================================================
+   ACCESIBILIDAD
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .hero__image {
+    transition: none;
   }
 }

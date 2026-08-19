@@ -1,0 +1,176 @@
+.about-profile {
+  width: 100%;
+  padding: 80px 0 110px;
+  background-color: var(--color-background);
+}
+
+/* =========================================================
+   VALORES
+   ========================================================= */
+
+.about-profile__values {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  max-width: 1050px;
+  margin: 0 auto;
+}
+
+.about-profile__value {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* =========================================================
+   CÍRCULOS
+   ========================================================= */
+
+.about-profile__circle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  width: 320px;
+  height: 320px;
+  padding: 42px;
+
+  border-radius: 50%;
+  background-color: var(--color-orange);
+
+  text-align: center;
+
+  transform: translateY(0);
+
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+/* =========================================================
+   EFECTO DE FLOTACIÓN
+   ========================================================= */
+
+.about-profile__circle:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(87, 94, 85, 0.12);
+}
+
+/* =========================================================
+   TÍTULO
+   ========================================================= */
+
+.about-profile__value-title {
+  max-width: 220px;
+  margin: 0 0 12px;
+
+  color: var(--color-dark);
+  font-family: var(--font-display);
+  font-size: 27px;
+  font-weight: 700;
+  line-height: 1.15;
+}
+
+/* =========================================================
+   TEXTO
+   ========================================================= */
+
+.about-profile__value-text {
+  max-width: 215px;
+  margin: 0;
+
+  color: var(--color-white);
+  font-family: var(--font-ui);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media screen and (max-width: 1100px) {
+  .about-profile__values {
+    gap: 20px;
+  }
+
+  .about-profile__circle {
+    width: 260px;
+    height: 260px;
+    padding: 35px;
+  }
+
+  .about-profile__value-title {
+    font-size: 25px;
+  }
+
+  .about-profile__value-text {
+    font-size: 13px;
+  }
+}
+
+/* =========================================================
+   TABLET PEQUEÑA
+   ========================================================= */
+
+@media screen and (max-width: 900px) {
+  .about-profile {
+    padding: 70px 0 90px;
+  }
+
+  .about-profile__values {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .about-profile__circle {
+    width: 280px;
+    height: 280px;
+  }
+}
+
+/* =========================================================
+   MÓVIL
+   ========================================================= */
+
+@media screen and (max-width: 767px) {
+  .about-profile {
+    padding: 60px 0 80px;
+  }
+
+  .about-profile__values {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .about-profile__circle {
+    width: 280px;
+    height: 280px;
+    padding: 35px;
+  }
+
+  .about-profile__value-title {
+    font-size: 26px;
+  }
+
+  .about-profile__value-text {
+    font-size: 14px;
+  }
+}
+
+/* =========================================================
+   ACCESIBILIDAD
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .about-profile__circle {
+    transition: none;
+  }
+
+  .about-profile__circle:hover {
+    transform: none;
+    box-shadow: none;
+  }
+}

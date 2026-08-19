@@ -1,108 +1,174 @@
 .footer {
   position: relative;
-  min-height: 300px;
+
+  width: 100%;
+  min-height: 360px;
+
   overflow: hidden;
+
+  background-color: var(--color-white);
+}
+
+/* =========================================================
+   VARIANTES DE FONDO
+   ========================================================= */
+
+/*
+ * Sobre mí, Proyectos y Contacto pueden utilizar
+ * el fondo blanco.
+ */
+
+.footer--white {
+  background-color: var(--color-white);
+}
+
+/*
+ * Home utiliza el fondo gris claro de la identidad visual.
+ */
+
+.footer--gray {
   background-color: var(--color-background);
 }
 
-/* =========================
+/* =========================================================
    CONTENIDO
-   ========================= */
+   ========================================================= */
 
 .footer__content {
   position: relative;
+
   z-index: 2;
+
   display: flex;
+
   flex-direction: column;
+
   align-items: center;
-  padding-top: 80px;
+
+  justify-content: flex-start;
+
+  min-height: 360px;
+
+  padding-top: 70px;
 }
 
-/* =========================
-   REDES Y CONTACTO
-   ========================= */
+/* =========================================================
+   REDES SOCIALES
+   ========================================================= */
 
 .footer__social {
   display: flex;
+
   align-items: center;
   justify-content: center;
+
   gap: 20px;
 }
 
 .footer__social-link {
   display: flex;
+
   align-items: center;
   justify-content: center;
-  width: 24px;
-  height: 24px;
-  transition: transform var(--transition-fast);
+
+  width: 20px;
+  height: 20px;
+
+  transition:
+    opacity var(--transition-fast),
+    transform var(--transition-fast);
 }
 
 .footer__social-link:hover {
+  opacity: 0.65;
+
   transform: translateY(-2px);
 }
 
 .footer__social-icon {
   display: block;
+
   width: 20px;
   height: 20px;
-  object-fit: contain;
 }
 
-/* =========================
+/* =========================================================
    COPYRIGHT
-   ========================= */
+   ========================================================= */
 
 .footer__copyright {
-  margin: 16px 0 0;
+  margin: 18px 0 0;
+
   color: var(--color-text-secondary);
+
   font-family: var(--font-ui);
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 400;
+
   line-height: 1.4;
+
   text-align: center;
 }
 
-/* =========================
-   VECTOR DECORATIVO
-   ========================= */
+/* =========================================================
+   VECTOR DEL FOOTER
+   ========================================================= */
+
+/*
+ * El SVG contiene la forma naranja.
+ *
+ * No modificamos su color ni su composición.
+ * Simplemente lo posicionamos en la parte inferior
+ * para que funcione independientemente del fondo
+ * de la página.
+ */
 
 .footer__vector {
   position: absolute;
+
   right: 0;
   bottom: 0;
+  left: 0;
+
   z-index: 1;
+
   display: block;
+
   width: 100%;
   height: auto;
+
   pointer-events: none;
 }
 
-/* =========================
+/* =========================================================
    TABLET
-   ========================= */
+   ========================================================= */
 
 @media screen and (max-width: 1024px) {
   .footer {
-    min-height: 260px;
+    min-height: 320px;
   }
 
   .footer__content {
-    padding-top: 70px;
+    min-height: 320px;
+
+    padding-top: 60px;
   }
 }
 
-/* =========================
+/* =========================================================
    MÓVIL
-   ========================= */
+   ========================================================= */
 
 @media screen and (max-width: 767px) {
   .footer {
-    min-height: 220px;
+    min-height: 280px;
   }
 
   .footer__content {
-    padding-top: 60px;
+    min-height: 280px;
+
+    padding-top: 50px;
   }
 
   .footer__social {
@@ -110,8 +176,8 @@
   }
 
   .footer__social-link {
-    width: 22px;
-    height: 22px;
+    width: 18px;
+    height: 18px;
   }
 
   .footer__social-icon {
@@ -120,7 +186,18 @@
   }
 
   .footer__copyright {
-    margin-top: 12px;
-    font-size: 10px;
+    margin-top: 14px;
+
+    font-size: 11px;
+  }
+}
+
+/* =========================================================
+   ACCESIBILIDAD
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .footer__social-link {
+    transition: none;
   }
 }
