@@ -19,24 +19,31 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+
   margin-bottom: 48px;
 }
 
 .featured-projects__title {
   margin: 0;
+
   color: var(--color-dark);
+
   font-family: var(--font-display);
   font-size: clamp(40px, 4vw, 48px);
   font-weight: 700;
   line-height: 1.5;
+
   text-align: center;
 }
 
 .featured-projects__line {
   width: 200px;
   height: 3px;
+
   margin-top: 4px;
+
   border-radius: 2px;
+
   background-color: var(--color-orange);
 }
 
@@ -47,7 +54,59 @@
 .featured-projects__list {
   display: flex;
   flex-direction: column;
+
   gap: 56px;
+}
+
+/* =========================
+   BOTÓN EXPLORAR PROYECTOS
+   ========================= */
+
+.featured-projects__more {
+  display: flex;
+  justify-content: center;
+
+  margin-top: 56px;
+}
+
+.featured-projects__more-link {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 9px 18px;
+
+  border: 1px solid var(--color-dark);
+  border-radius: 999px;
+
+  background-color: transparent;
+
+  color: var(--color-dark);
+
+  font-family: var(--font-ui);
+  font-size: 14px;
+  font-weight: 500;
+
+  line-height: 1.2;
+
+  text-decoration: none;
+
+  transition:
+    background-color var(--transition-fast),
+    color var(--transition-fast),
+    border-color var(--transition-fast),
+    transform var(--transition-fast);
+}
+
+.featured-projects__more-link:hover {
+  border-color: var(--color-orange);
+
+  background-color: var(--color-orange);
+
+  color: var(--color-dark);
+
+  transform: translateY(-2px);
 }
 
 /* =========================
@@ -69,6 +128,10 @@
 
   .featured-projects__list {
     gap: 40px;
+  }
+
+  .featured-projects__more {
+    margin-top: 48px;
   }
 }
 
@@ -100,5 +163,25 @@
 
   .featured-projects__list {
     gap: 32px;
+  }
+
+  .featured-projects__more {
+    margin-top: 40px;
+  }
+
+  .featured-projects__more-link {
+    padding: 8px 15px;
+
+    font-size: 14px;
+  }
+}
+
+/* =========================
+   ACCESIBILIDAD
+   ========================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .featured-projects__more-link {
+    transition: none;
   }
 }

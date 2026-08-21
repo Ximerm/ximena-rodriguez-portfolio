@@ -27,9 +27,9 @@ function About() {
             <p className="about__description">
               Abordo la programación desde una mirada estructurada, combinando
               la rigurosidad técnica de la arquitectura con una visión intuitiva
-              y centrada en las personas. Desarrollo soluciones digitales con
-              especial interés en interfaces funcionales, datos y sistemas
-              sostenibles.
+              y centrada en las personas. Desarrollo soluciones digitales
+              combinando interfaces funcionales, análisis de datos y una visión
+              orientada a la sostenibilidad.
             </p>
 
             <div className="about__actions">

@@ -1,6 +1,7 @@
 import "./Hero.css";
 
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 import architecturalPlan from "../../assets/images/Hero/architectural-plan.png";
 import codeScreen from "../../assets/images/Hero/code-screen.png";
@@ -50,13 +51,13 @@ function Hero() {
           </p>
 
           <div className="hero__actions">
-            <a className="hero__button" href="#projects">
+            <Link className="hero__button" to="/proyectos">
               Ver Proyectos
-            </a>
+            </Link>
 
             <a
               className="hero__button"
-              href="TU-LINKEDIN"
+              href="https://www.linkedin.com/in/arqximenarm/"
               target="_blank"
               rel="noreferrer"
             >

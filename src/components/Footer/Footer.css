@@ -13,21 +13,25 @@
    VARIANTES DE FONDO
    ========================================================= */
 
-/*
- * Sobre mí, Proyectos y Contacto pueden utilizar
- * el fondo blanco.
- */
-
 .footer--white {
   background-color: var(--color-white);
 }
 
-/*
- * Home utiliza el fondo gris claro de la identidad visual.
- */
-
 .footer--gray {
   background-color: var(--color-background);
+}
+
+/*
+ * Contacto
+ *
+ * El footer de contacto utiliza el mismo naranja
+ * de la sección principal de contacto.
+ *
+ * El vector utilizado en esta variante es blanco.
+ */
+
+.footer--orange {
+  background-color: var(--color-orange);
 }
 
 /* =========================================================
@@ -93,6 +97,98 @@
 }
 
 /* =========================================================
+   NAVEGACIÓN
+   ========================================================= */
+
+.footer__navigation {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 10px;
+
+  margin-top: 20px;
+}
+
+.footer__navigation-link {
+  color: var(--color-text-secondary);
+
+  font-family: var(--font-ui);
+  font-size: 13px;
+  font-weight: 500;
+
+  line-height: 1.4;
+
+  text-decoration: none;
+
+  transition:
+    color var(--transition-fast),
+    opacity var(--transition-fast);
+}
+
+.footer__navigation-link:hover {
+  color: var(--color-orange);
+
+  opacity: 0.8;
+}
+
+.footer__navigation-separator {
+  color: var(--color-text-secondary);
+
+  font-family: var(--font-ui);
+  font-size: 13px;
+
+  line-height: 1.4;
+
+  opacity: 0.6;
+}
+
+/*
+ * En contacto el fondo es naranja,
+ * por lo que la navegación se muestra en blanco.
+ */
+
+.footer--orange .footer__navigation-link {
+  color: var(--color-white);
+}
+
+.footer--orange .footer__navigation-link:hover {
+  color: var(--color-dark);
+}
+
+.footer--orange .footer__navigation-separator {
+  color: var(--color-white);
+}
+
+/* =========================================================
+   IDENTIDAD
+   ========================================================= */
+
+.footer__tagline {
+  margin: 18px 0 0;
+
+  color: var(--color-text-secondary);
+
+  font-family: var(--font-ui);
+  font-size: 14px;
+  font-weight: 400;
+
+  line-height: 1.4;
+
+  text-align: center;
+}
+
+/*
+ * En contacto el fondo es naranja,
+ * por lo que la identidad se muestra en blanco.
+ */
+
+.footer--orange .footer__tagline {
+  color: var(--color-white);
+}
+
+/* =========================================================
    COPYRIGHT
    ========================================================= */
 
@@ -110,18 +206,17 @@
   text-align: center;
 }
 
+/*
+ * En contacto el fondo es naranja.
+ */
+
+.footer--orange .footer__copyright {
+  color: var(--color-white);
+}
+
 /* =========================================================
    VECTOR DEL FOOTER
    ========================================================= */
-
-/*
- * El SVG contiene la forma naranja.
- *
- * No modificamos su color ni su composición.
- * Simplemente lo posicionamos en la parte inferior
- * para que funcione independientemente del fondo
- * de la página.
- */
 
 .footer__vector {
   position: absolute;
@@ -185,6 +280,28 @@
     height: 18px;
   }
 
+  /* Navegación móvil */
+
+  .footer__navigation {
+    gap: 7px;
+
+    margin-top: 16px;
+  }
+
+  .footer__navigation-link {
+    font-size: 11px;
+  }
+
+  .footer__navigation-separator {
+    font-size: 11px;
+  }
+
+  .footer__tagline {
+    margin-top: 14px;
+
+    font-size: 11px;
+  }
+
   .footer__copyright {
     margin-top: 14px;
 
@@ -197,7 +314,8 @@
    ========================================================= */
 
 @media (prefers-reduced-motion: reduce) {
-  .footer__social-link {
+  .footer__social-link,
+  .footer__navigation-link {
     transition: none;
   }
 }
