@@ -33,6 +33,37 @@ const professionalExperience = [
   },
 
   {
+    id: "frontend-web",
+    period: "Mayo - Junio 2026",
+    title: "Desarrolladora Front-End",
+    organization: "Freelance",
+
+    description: [
+      {
+        bold: "Rediseñé y maqueté una suite de formularios institucionales, ",
+        text: "adaptando las estructuras existentes para mejorar la legibilidad, la consistencia visual y la experiencia de usuario (UX).",
+      },
+      {
+        bold: "Implementé el rediseño visual directamente sobre estructuras HTML existentes, ",
+        text: "resolviendo limitaciones técnicas específicas para garantizar compatibilidad con el motor de renderizado de CKEditor 4.21.",
+      },
+      {
+        bold: "Preservé las reglas de negocio y la estructura de los campos, ",
+        text: " asegurando una presentación consistente tanto en pantalla como en la exportación final a PDF e impresión.",
+      },
+    ],
+
+    technologies: [
+      "HTML",
+      "CSS inline",
+      "CKEditor",
+      "Maquetación Web",
+      "Diseño UI",
+      "Exportación PDF",
+    ],
+  },
+
+  {
     id: "architecture",
     period: "2009 – 2026",
     title: "Arquitectura, sostenibilidad y gestión de proyectos",

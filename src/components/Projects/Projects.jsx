@@ -119,65 +119,6 @@ function ProjectActions({ project, featured = false }) {
 }
 
 // =========================================================
-// BEFORE / AFTER
-// =========================================================
-
-function BeforeAfterToggle({ project }) {
-  const [isOpen, setIsOpen] = useState(false);
-
-  return (
-    <div className="projects__before-after">
-      <button
-        className="projects__before-after-toggle"
-        type="button"
-        onClick={() => setIsOpen((current) => !current)}
-        aria-expanded={isOpen}
-      >
-        <span>
-          {isOpen ? "Ocultar antes y después" : "Ver antes y después"}
-        </span>
-
-        <span className="projects__before-after-icon" aria-hidden="true">
-          {isOpen ? "↑" : "↓"}
-        </span>
-      </button>
-
-      {isOpen && (
-        <div className="projects__before-after-content">
-          <div className="projects__before-after-item">
-            <span className="projects__before-after-label">ANTES</span>
-
-            <div className="projects__before-after-image-wrapper">
-              <img
-                className="projects__before-after-image"
-                src={project.beforeImage}
-                alt={`Versión original de ${project.title}`}
-              />
-            </div>
-          </div>
-
-          <span className="projects__before-after-arrow" aria-hidden="true">
-            →
-          </span>
-
-          <div className="projects__before-after-item">
-            <span className="projects__before-after-label">DESPUÉS</span>
-
-            <div className="projects__before-after-image-wrapper">
-              <img
-                className="projects__before-after-image"
-                src={project.afterImage}
-                alt={`Versión rediseñada de ${project.title}`}
-              />
-            </div>
-          </div>
-        </div>
-      )}
-    </div>
-  );
-}
-
-// =========================================================
 // TARJETA DE PROYECTO
 // =========================================================
 
@@ -208,11 +149,8 @@ function ProjectCard({ project, featured = false }) {
 
         <div className="projects__card-content">
           <p className="projects__card-category">{project.category}</p>
-
           <h3 className="projects__card-title">{project.title}</h3>
-
           <p className="projects__card-description">{project.description}</p>
-
           <div className="projects__card-technologies">
             {project.technologies.map((technology) => (
               <span
@@ -224,36 +162,28 @@ function ProjectCard({ project, featured = false }) {
             ))}
           </div>
 
-          {project.type === "before-after" ? (
-            <BeforeAfterToggle project={project} />
-          ) : (
-            <>
-              <ProjectActions project={project} featured={featured} />
+          <ProjectActions project={project} featured={featured} />
 
-              {featured && project.caseStudy && (
-                <button
-                  className="projects__card-expand"
-                  type="button"
-                  onClick={() => setIsExpanded((current) => !current)}
-                  aria-expanded={isExpanded}
-                >
-                  <span>
-                    {isExpanded
-                      ? "Ocultar caso de estudio"
-                      : "Ver caso de estudio"}
-                  </span>
+          {featured && project.caseStudy && (
+            <button
+              className="projects__card-expand"
+              type="button"
+              onClick={() => setIsExpanded((current) => !current)}
+              aria-expanded={isExpanded}
+            >
+              <span>
+                {isExpanded ? "Ocultar caso de estudio" : "Ver caso de estudio"}
+              </span>
 
-                  <span
-                    className={`projects__card-expand-icon ${
-                      isExpanded ? "projects__card-expand-icon--open" : ""
-                    }`}
-                    aria-hidden="true"
-                  >
-                    ↓
-                  </span>
-                </button>
-              )}
-            </>
+              <span
+                className={`projects__card-expand-icon ${
+                  isExpanded ? "projects__card-expand-icon--open" : ""
+                }`}
+                aria-hidden="true"
+              >
+                ↓
+              </span>
+            </button>
           )}
         </div>
       </div>

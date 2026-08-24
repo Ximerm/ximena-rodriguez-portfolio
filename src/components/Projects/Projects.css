@@ -357,7 +357,6 @@
   min-width: 0;
 
   padding: 48px 45px;
-  text-align: justify;
 }
 
 /*
@@ -411,6 +410,7 @@
   font-family: var(--font-ui);
   font-size: 16px;
   line-height: 1.6;
+  text-align: justify;
 }
 
 /* =========================================================
@@ -472,7 +472,7 @@
 
   border-radius: 999px;
 
-  font-family: var(--font-ui);
+  font-family: var(--font-brand);
   font-size: 14px;
   font-weight: 600;
   line-height: 1;
@@ -577,7 +577,7 @@
   background-color: transparent;
   color: var(--color-dark);
 
-  font-family: var(--font-ui);
+  font-family: var(--font-brand);
   font-size: 14px;
   font-weight: 600;
   line-height: 1.2;
@@ -826,7 +826,7 @@
 
   color: var(--color-dark);
 
-  font-family: var(--font-ui);
+  font-family: var(--font-brand);
   font-size: 14px;
   font-weight: 600;
   line-height: 1.2;

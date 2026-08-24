@@ -1,15 +1,10 @@
 import ecoBuildLabImage from "../assets/images/Projects/ecobuildlab.png";
 import aroundImage from "../assets/images/Projects/around.png";
 
-import project01Before from "../assets/images/Projects/proyecto01_antes.png";
-import project01After from "../assets/images/Projects/proyecto01_despues.png";
-
-import project02Before from "../assets/images/Projects/proyecto02_antes.png";
-import project02After from "../assets/images/Projects/proyecto02_despues.png";
-
 import libraryImage from "../assets/images/Projects/library.png";
 import coffeeShopImage from "../assets/images/Projects/coffee-shop.png";
 import patriaImage from "../assets/images/Projects/patria.png";
+import estilizacionImage from "../assets/images/Projects/estilizacion.png";
 
 const projects = [
   {
@@ -91,41 +86,20 @@ const projects = [
   },
 
   {
-    id: "estilizacion-interfaces",
-    title: "Estilización de interfaces corporativas",
+    id: "rediseño-formularios",
+    title: "Rediseño de formularios corporativos",
     category: "FRONT-END · PROYECTO PROFESIONAL",
     featured: false,
 
     description:
-      "Modernización de documentos corporativos mediante plantillas HTML y CSS. Implementación de una estructura semántica y estilos orientados a impresión para mejorar la consistencia visual, legibilidad y presentación de información operativa.",
+      "Modernización, reestructuración y estandarización visual de una suite de documentos institucionales. Implementación de una arquitectura semántica y estilos orientados a impresión para garantizar la consistencia gráfica y legibilidad en formularios operativos y reportes técnicos dinámicos.",
 
     technologies: ["HTML", "CSS", "Print CSS"],
 
-    image: null,
+    image: estilizacionImage,
+    projectUrl: "https://rediseno-formularios.vercel.app/",
 
-    type: "before-after",
-
-    beforeImage: project01Before,
-    afterImage: project01After,
-  },
-
-  {
-    id: "reportes-tecnicos",
-    title: "Rediseño y maquetación de reportes técnicos",
-    category: "FRONT-END · PROYECTO PROFESIONAL",
-    featured: false,
-
-    description:
-      "Refactorización de una interfaz de reportes industriales mediante HTML y CSS. Implementación de una nueva jerarquía visual e identidad de marca para mejorar la legibilidad de tablas y datos técnicos.",
-
-    technologies: ["HTML", "CSS", "Print CSS"],
-
-    image: null,
-
-    type: "before-after",
-
-    beforeImage: project02Before,
-    afterImage: project02After,
+    githubUrl: "https://github.com/Ximerm/rediseno-formularios",
   },
 
   {
@@ -135,31 +109,31 @@ const projects = [
     featured: false,
 
     description:
-      "Desarrollo de una interfaz web responsive a partir de un diseño de alta fidelidad en Figma. Implementación de layouts adaptativos con Flexbox y CSS Grid bajo la metodología BEM, integrando media queries y estados interactivos para garantizar una experiencia consistente en diferentes dispositivos.",
+      "Desarrollo de una interfaz web responsive a partir de un diseño de alta fidelidad en Figma. Implementación de layouts adaptativos con Flexbox y CSS Grid bajo la metodología BEM, utilizando media queries y estados interactivos para mantener una experiencia consistente en diferentes dispositivos.",
 
     technologies: ["HTML5", "CSS3", "BEM", "CSS Grid", "Responsive Design"],
 
     image: patriaImage,
 
-    projectUrl: "AQUI-VA-EL-LINK",
-    githubUrl: "AQUI-VA-EL-GITHUB",
+    projectUrl: "https://ximerm.github.io/web_project_homeland/",
+    githubUrl: "https://github.com/Ximerm/web_project_homeland",
   },
 
   {
-    id: "triple-expresso",
-    title: "Triple Expresso",
+    id: "triple-espresso",
+    title: "Triple Espresso",
     category: "FRONT-END · PROYECTO ACADÉMICO",
     featured: false,
 
     description:
-      "Desarrollo de una interfaz web adaptativa a partir de especificaciones técnicas de diseño. Implementación de HTML semántico, CSS y metodología BEM para estructurar una interfaz modular, escalable y mantenible.",
+      "Desarrollo de una landing page para una cafetería y zona de estudio, a partir de un brief de diseño. Implementación de HTML semántico, CSS, Flexbox y metodología BEM, con ajustes posteriores para mejorar la adaptación del layout a diferentes anchos de pantalla.",
 
-    technologies: ["HTML5", "CSS3", "BEM", "Responsive Design"],
+    technologies: ["HTML5", "CSS3", "BEM", "CSS Positioning"],
 
     image: coffeeShopImage,
 
-    projectUrl: "AQUI-VA-EL-LINK",
-    githubUrl: "AQUI-VA-EL-GITHUB",
+    projectUrl: "https://web-project-coffeeshop-sigma.vercel.app/",
+    githubUrl: "https://github.com/Ximerm/web_project_coffeeshop",
   },
 
   {
@@ -169,14 +143,14 @@ const projects = [
     featured: false,
 
     description:
-      "Evolución y maquetación adaptativa de una plataforma web basada en un brief técnico. Implementación de HTML5 semántico y metodología BEM para estructurar una interfaz modular y mantenible, desarrollando desde cero nuevas secciones de contenido, navegación y el footer.",
+      "Evolución y maquetación adaptativa de una plataforma web basada en un brief técnico. Implementación de HTML5 semántico y metodología BEM para estructurar una interfaz modular y mantenible.",
 
-    technologies: ["HTML5", "CSS3", "BEM", "Responsive Design"],
+    technologies: ["HTML5", "CSS3", "BEM", "CSS Positioning"],
 
     image: libraryImage,
 
-    projectUrl: "AQUI-VA-EL-LINK",
-    githubUrl: "AQUI-VA-EL-GITHUB",
+    projectUrl: "https://web-project-library-sigma.vercel.app/",
+    githubUrl: "https://github.com/Ximerm/web_project_library",
   },
 ];
 
