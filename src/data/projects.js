@@ -69,9 +69,9 @@ const projects = [
 
     image: aroundImage,
 
-    projectUrl: "AQUI-VA-EL-LINK-DE-AROUND",
+    projectUrl: "https://aroundxr.mooo.com/signin",
 
-    githubUrl: "AQUI-VA-EL-GITHUB-DE-AROUND",
+    githubUrl: "https://github.com/Ximerm/web_project_api_full",
 
     caseStudy: {
       challenge:
