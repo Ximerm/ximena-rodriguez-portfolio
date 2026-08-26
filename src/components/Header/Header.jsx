@@ -1,13 +1,15 @@
 import "./Header.css";
 
 import { Link } from "react-router-dom";
+import logoHeader from "../../assets/images/Header/logo-header.png";
 
 function Header() {
   return (
     <header className="header">
       <div className="header__container container">
         <Link className="header__logo" to="/">
-          Ximena Rodríguez
+          <img className="header__logo-image" src={logoHeader} alt="" />
+          <span>Ximena Rodríguez</span>
         </Link>
 
         <nav className="header__nav" aria-label="Navegación principal">

@@ -25,11 +25,22 @@
    ========================= */
 
 .header__logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
   color: var(--color-dark);
   font-family: var(--font-brand);
   font-size: 18px;
   font-weight: 700;
+
   transition: opacity var(--transition-fast);
+}
+
+.header__logo-image {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
 }
 
 .header__logo:hover {
@@ -73,5 +84,14 @@
 
   .header__link {
     font-size: 14px;
+  }
+
+  .header__logo-image {
+    width: 24px;
+    height: 24px;
+  }
+
+  .header__logo {
+    gap: 8px;
   }
 }
