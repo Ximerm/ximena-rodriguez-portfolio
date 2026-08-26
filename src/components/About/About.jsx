@@ -35,7 +35,7 @@ function About() {
             <div className="about__actions">
               <a
                 className="about__button"
-                href="/cv/Ximena_Rodriguez_CV.pdf"
+                href="/cv/Ximena-Rodriguez-CV.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
               >
