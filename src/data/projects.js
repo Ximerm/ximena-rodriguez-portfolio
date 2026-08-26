@@ -69,7 +69,7 @@ const projects = [
 
     image: aroundImage,
 
-    projectUrl: "https://aroundxr.mooo.com/signin",
+    projectUrl: "https://aroundxr.duckdns.org/",
 
     githubUrl: "https://github.com/Ximerm/web_project_api_full",
 
