@@ -35,7 +35,7 @@ const professionalExperience = [
   {
     id: "frontend-web",
     period: "Mayo - Junio 2026",
-    title: "Desarrolladora Front-End",
+    title: "Desarrolladora Web Front-End",
     organization: "Freelance",
 
     description: [
